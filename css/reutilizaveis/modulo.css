@@ -1,0 +1,284 @@
+@import url("../style.css");
+@import url("root.css");
+
+/* Main com container mais largo para acomodar preview dos cards adjacentes */
+main {
+  flex: 1;
+  margin-top: 120px;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px; /* Espaço extra para garantir que há scroll */
+  overflow: hidden; /* Evita scroll horizontal */
+}
+
+.navegacao ul {
+  margin-bottom: 0 !important;
+}
+
+/* Container do carrossel com largura aumentada */
+#cardsCarousel {
+  max-width: 1200px; /* Largura maior para mostrar preview dos cards adjacentes */
+  width: 100%;
+  position: relative;
+}
+
+/* Carousel inner com overflow visível para mostrar cards adjacentes */
+.carousel-inner {
+  overflow: visible; /* Permite ver os cards adjacentes */
+}
+
+/* Ajusta o card para mostrar preview dos adjacentes */
+.carousel-item {
+  a{
+    text-decoration: none;
+    color: white
+  }
+  padding: 0 100px; /* Espaço para as setas ficarem fora */
+}
+
+.carousel .card {
+  max-width: 900px;
+  margin: 0 auto; /* centralizar no slide */
+}
+
+/* Card */
+.card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+  border: 2px solid transparent;
+
+  width: 900px; /* Aumenta largura */
+  max-width: 900px;
+  min-width: 900px; /* Mantém sempre o mesmo tamanho */
+  height: auto; /* Ajusta altura automaticamente */
+  box-sizing: border-box;
+  z-index: 200;
+}
+
+.card-img {
+  width: 100%;
+  height: 300px; /* Aumenta a altura da imagem */
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin-bottom: 12px;
+}
+
+/* Rodapé do card */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  background-color: #1b4332;
+  color: #80e27e;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.btn-continuar {
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.3s;
+}
+
+/* .top-bar {
+  display: flex;
+  align-items: center;
+  padding: 15px; */
+  /* background-color: #1a1a1a; */
+  /* position: sticky;
+  top: 0;
+  z-index: 999;
+} */
+/* 
+.top-bar h1 {
+  flex: 1;
+  text-align: center;
+  font-size: 22px;
+  margin: 0;
+} */
+
+.btn-continuar:hover {
+  background-color: #66bb6a;
+}
+
+/* Container dos cards em linha */
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px; /* Espaço entre os cards */
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  align-items: stretch; /* Faz os cards ficarem com a mesma altura */
+  margin-top: 114px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+/* Limita o efeito de hover para não causar overflow */
+.cards-container a:hover .card,
+.card:hover {
+  transform: scale(1.03);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1), 0 2px 8px rgba(0, 0, 0, 0.18);
+  z-index: 1;
+}
+
+#carouselBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(12px);
+  z-index: -1;
+  transition: background-image 0.6s ease-in-out;
+}
+
+/* Setas do carrossel posicionadas fora dos cards */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 80px; /* Largura maior para área de clique */
+  height: 80px; /* Altura maior para área de clique */
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: opacity 0.3s, background-color 0.3s;
+}
+
+.carousel-control-prev {
+  left: -120px; /* Posiciona fora do card */
+}
+
+.carousel-control-next {
+  right: -120px; /* Posiciona fora do card */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Ícones das setas maiores e mais visíveis */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 30px;
+  height: 30px;
+  background-size: 100%, 100%;
+}
+
+/* Para mostrar preview dos cards adjacentes */
+.carousel-item:not(.active) {
+  opacity: 0.3;
+  transform: scale(0.8);
+  transition: all 0.6s ease;
+}
+
+/* Indicadores posicionados mais embaixo */
+.carousel-indicators {
+  bottom: -60px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.carousel-indicators .active {
+  background-color: #4caf50;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1400px) {
+  .carousel-control-prev {
+    left: -60px;
+  }
+  
+  .carousel-control-next {
+    right: -60px;
+  }
+  
+  .carousel-item {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .carousel-control-prev {
+    left: -40px;
+  }
+  
+  .carousel-control-next {
+    right: -40px;
+  }
+  
+  .carousel-item {
+    padding: 0 40px;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 800px;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-control-prev {
+    left: -20px;
+  }
+  
+  .carousel-control-next {
+    right: -20px;
+  }
+  
+  .carousel-item {
+    padding: 0 20px;
+  }
+  
+  .card {
+    width: 90%;
+    max-width: 90%;
+    min-width: 300px;
+  }
+}

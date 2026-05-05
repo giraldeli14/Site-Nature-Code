@@ -1,0 +1,348 @@
+@import url("./reutilizaveis/root.css");
+@import url("../style.css");
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.back-arrow {
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* logo + título + subtítulo*/
+.app-info {
+  text-align: center;
+  padding: 20px;
+}
+
+.app-logo {
+  width: 90px;
+  border-radius: 50%;
+}
+
+.app-info h2 {
+  color: #4caf50;
+  margin: 15px 0 5px;
+  font-size: 24px;
+}
+
+.app-info p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Blocos de informações */
+.info-block {
+  padding: 15px 20px;
+  border-bottom: 1px solid #222;
+}
+
+.info-block h3 {
+  color: #4caf50;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.info-block p,
+.info-block small {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+/* Lista de desenvolvedores */
+.dev-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dev-list li {
+  margin: 8px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.dev-list-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dev-list-inline {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Versão */
+.version {
+  text-align: center;
+  font-style: italic;
+}
+
+.version p {
+  color: #4caf50;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.version small {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Estilo do Rodapé */
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 50px 20px;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  margin-top: auto;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+footer h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+  font-family: "Libre Baskerville", serif;
+}
+
+footer h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+}
+
+footer p,
+footer li,
+footer small {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+/* Exemplo de estrutura para o rodapé */
+.footer-info {
+  margin-bottom: 20px;
+}
+
+.footer-devs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dev-list-col {
+  flex: 1;
+  min-width: 150px;
+  margin: 0 10px;
+}
+
+.icone-devs {
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  filter: brightness(0) saturate(100%) invert(70%) sepia(73%) saturate(458%) 
+          hue-rotate(104deg) brightness(95%) contrast(86%);
+}
+
+.dev-list-coluna {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dev-list-coluna li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* ============================================ */
+/* RESPONSIVIDADE - RODAPÉ */
+/* ============================================ */
+
+/* TABLET - até 768px */
+@media (max-width: 768px) {
+  footer {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  footer h2 {
+    font-size: 1.6rem;
+  }
+
+  footer h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .info-block {
+    border-bottom: none;
+    padding: 15px 10px;
+  }
+
+  .dev-list {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+
+  .dev-list li {
+    white-space: normal;
+    justify-content: center;
+  }
+
+  .dev-list-inline {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .dev-list-coluna {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 16px;
+    justify-items: center;
+  }
+
+  .dev-list-coluna li {
+    white-space: normal;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .icone-devs {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* MOBILE - até 475px */
+@media (max-width: 475px) {
+  footer {
+    padding: 30px 15px;
+  }
+
+  .footer-container {
+    gap: 25px;
+  }
+
+  footer h2 {
+    font-size: 1.4rem;
+  }
+
+  footer h3 {
+    font-size: 1.1rem;
+  }
+
+  footer p,
+  footer li,
+  footer small {
+    font-size: 0.9rem;
+  }
+
+  .info-block {
+    padding: 12px 5px;
+  }
+
+  .info-block p {
+    font-size: 13px;
+  }
+
+  /* Desenvolvedores em 1 coluna no mobile */
+  .dev-list-coluna {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .dev-list-coluna li {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .icone-devs {
+    width: 18px;
+    height: 18px;
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+}
+
+/* MOBILE EXTRA PEQUENO - até 375px */
+@media (max-width: 375px) {
+  footer {
+    padding: 25px 10px;
+  }
+
+  .footer-container {
+    gap: 20px;
+  }
+
+  footer h2 {
+    font-size: 1.2rem;
+  }
+
+  footer h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  footer p,
+  footer li,
+  footer small {
+    font-size: 0.85rem;
+  }
+
+  .info-block p {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .dev-list-coluna {
+    gap: 8px;
+  }
+
+  .dev-list-coluna li {
+    font-size: 12px;
+  }
+
+  .icone-devs {
+    width: 16px;
+    height: 16px;
+  }
+}
