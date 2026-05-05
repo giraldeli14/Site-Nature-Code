@@ -799,3 +799,20 @@ h1 {
     font-size: 13px;
   }
 }
+
+.reset-btn {
+  background: none;
+  border: 1px solid rgba(255, 100, 100, 0.4);
+  color: #ff6b6b;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.reset-btn:hover {
+  background: rgba(255, 107, 107, 0.15);
+  border-color: #ff6b6b;
+}
