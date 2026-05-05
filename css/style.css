@@ -650,54 +650,114 @@ nav a:hover::after {
 }
 
 /* ===== RESPONSIVIDADE ===== */
-@media (max-width: 768px) {
-  .titulo-principal {
-    font-size: 3rem;
-    text-align: center;
-  }
+@media (min-width: 481px) and (max-width: 768px) {
 
-  .sobrepor-texto {
-    margin: 16px auto;
-    padding: 1rem;
-    max-width: 100%;
-    text-align: center;
+  .titulo-principal {
+    font-size: 3.5rem;
   }
 
   .sobrepor-texto p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .btn-animado {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-top: 20px;
   }
 
   .btn-comecar {
-    position: relative;
-    margin: 16px auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 24px;
     padding: 0;
-    justify-content: center;
   }
 
-  .btn {
-    padding: 10px 20px;
-    font-size: 1rem;
+  .sobrepor-texto {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 16px;
+    padding: 1rem;
   }
 }
 
 @media (max-width: 480px) {
+
+  /* Esconde o vídeo no mobile */
+  .video-fundo {
+    display: none;
+  }
+
+  /* Imagem de fundo no mobile */
+  .conteudo-principal {
+    background-image: url("../images/jaguar-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-end; /* empurra conteúdo pra baixo */
+    padding-bottom: 60px;
+  }
+
+  /* Tira o position absolute dos dois elementos */
+  .sobrepor-texto {
+    position: relative;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .btn-comecar {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+  }
+
+  /* Título menor */
   .titulo-principal {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+  }
+
+  /* Subtítulo menor */
+  .sobrepor-texto p {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  /* Botão COMEÇAR centralizado */
+  .btn-animado {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .titulo-principal {
+    font-size: 5rem;
   }
 
   .sobrepor-texto p {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
-  .btn {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-
-  .conteudo-principal {
-    background-image: url("../images/jaguar-mobile.jpg");
+  .btn-animado {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
   }
 }
+
+/* ====== FIM RESPONSIVIDADE ====== */
+
+/*================================== */
+/* Estilos para o botão com efeito de brilho e partículas */
+/*================================== */
 
 /* From Uiverse.io by JkHuger */
 .sparkle-button {

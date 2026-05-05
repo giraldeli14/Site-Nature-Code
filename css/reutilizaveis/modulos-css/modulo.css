@@ -1,5 +1,5 @@
-@import url("../style.css");
-@import url("root.css");
+@import url("../../style.css");
+@import url("../root.css");
 
 /* Main com container mais largo para acomodar preview dos cards adjacentes */
 main {
@@ -280,5 +280,64 @@ main {
     width: 90%;
     max-width: 90%;
     min-width: 300px;
+  }
+}
+
+/* ===== MOBILE (até 576px) ===== */
+@media (max-width: 576px) {
+
+  html, body {
+    height: 100%;
+  }
+
+  main {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    min-height: 100svh; /* svh = altura real do mobile, descontando barra do navegador */
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Remove as setas no mobile */
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none !important;
+  }
+
+  /* Carrossel ocupa a largura da tela */
+  #cardsCarousel {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  /* Sem padding lateral exagerado */
+  .carousel-item {
+    padding: 0 8px;
+  }
+
+  /* Card menor e responsivo */
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto;
+  }
+
+  /* Imagem menor */
+  .card-img {
+    height: 200px;
+  }
+
+  /* Indicadores mais próximos do card */
+  .carousel-indicators {
+    bottom: -40px;
+  }
+
+  /* Habilita swipe por toque (Bootstrap já suporta, mas reforça) */
+  .carousel-inner {
+    touch-action: pan-y;
   }
 }

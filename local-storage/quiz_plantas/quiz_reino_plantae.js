@@ -437,12 +437,12 @@ function submitQuiz() {
 
 nextBtnEl.addEventListener('click', () => {
   if (currentQuestion === quizData.length - 1 && !quizSubmitted) {
-    // Enviar respostas
     submitQuiz();
   } else if (currentQuestion < quizData.length - 1) {
     currentQuestion++;
     renderQuestion();
-    window.scrollTo(0, 0);
+    // Troque window.scrollTo(0, 0) por isso:
+    document.querySelector('.div2 .container').scrollTo(0, 0);
   }
 });
 
@@ -450,7 +450,7 @@ prevBtnEl.addEventListener('click', () => {
   if (currentQuestion > 0) {
     currentQuestion--;
     renderQuestion();
-    window.scrollTo(0, 0);
+    document.querySelector('.div2 .container').scrollTo(0, 0);
   }
 });
 
@@ -458,7 +458,7 @@ nextNavBtnEl.addEventListener('click', () => {
   if (currentQuestion < quizData.length - 1) {
     currentQuestion++;
     renderQuestion();
-    window.scrollTo(0, 0);
+    document.querySelector('.div2 .container').scrollTo(0, 0);
   }
 });
 

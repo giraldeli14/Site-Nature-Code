@@ -21,97 +21,107 @@ body {
   font-size: 38px;
 }
 
+@media (max-width: 576px) {
+
+  /* Empurra o conteúdo para baixo do header fixo */
+  .text-center {
+    padding-top: 90px !important;
+    margin-top: 0 !important;
+  }
+
+}
+
 /* =========================
    CARD ESPECÍFICO
 ========================= */
 
 /* CARDS DO ECOSSISTEMAS */
 .card-definicao {
-  background-image: url(../../../images/capas-topicos/capa-definicao.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-definicao.jpg);
 }
 
 .card-ecossistema {
-  background-image: url(../../../images/capas-topicos/capa-ecossistemas-terra.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-ecossistemas-terra.jpg);
 }
 
 .card-mundo-vivo {
-  background-image: url(../../../images/capas-topicos/capa-mundo-vivo.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-mundo-vivo.jpg);
 }
 
 .card-fluxo-de-energia {
-  background-image: url(../../../images/capas-topicos/capa-fluxo-energia.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-fluxo-energia.jpg);
 }
 
 .card-sucessao-ecologica {
-  background-image: url(../../../images/capas-topicos/capa-sucessao.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-sucessao.jpg);
 }
 
 .card-piramides-ecologicas {
-  background-image: url(../../../images/capas-topicos/capa-piramides.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-piramides.jpg);
 }
 
 /* CaRDS DO ANIMAIS */
 
 .card-reino-animalia {
-  background-image: url(../../../images/capas-topicos/capa-reino-animal.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-reino-animal.jpg);
 }
 
 .card-filo-dos-poriferos {
-  background-image: url(../../../images/capas-topicos/capa-poriferos.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-poriferos.jpg);
 }
 
 .card-filo-dos-cnidarios{
-  background-image: url(../../../images/capas-topicos/capa-cnidarios.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-cnidarios.jpg);
 }
 
 .card-filo-dos-platelmintos{
-  background-image: url(../../../images/capas-topicos/capa-platelmintos.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-platelmintos.jpg);
 }
 
 .card-filo-dos-nematelmintos{
-  background-image: url(../../../images/capas-topicos/capa-nematelmintos.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-nematelmintos.jpg);
 }
 
 .card-filo-dos-moluscos{
-  background-image: url(../../../images/capas-topicos/capa-moluscos.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-moluscos.jpg);
 }
 
 .card-filo-dos-anelideos{
-  background-image: url(../../../images/capas-topicos/capa-anelideos.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-anelideos.jpg);
 }
 
 .card-filo-dos-artropodes{
-  background-image: url(../../../images/capas-topicos/capa-artropodes.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-artropodes.jpg);
 }
 
 .card-filo-dos-equinodermos{
-  background-image: url(../../../images/capas-topicos/capa-equinodermos.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-equinodermos.jpg);
 }
 
 .card-filo-dos-cordados{
-  background-image: url(../../../images/capas-topicos/capa-cordados.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-cordados.jpg);
 }
 
 /* CARDS DO PLANTAS */
 
 .card-reino-plantae{
-  background-image: url(../../../images/capas-topicos/capa_reino-plantae.jpg);
+  background-image: url(../../../../images/capas-topicos/capa_reino-plantae.jpg);
 }
 
 .card-briofitas{
-  background-image: url(../../../images/capas-topicos/capa-briofitas.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-briofitas.jpg);
 }
 
 .card-pteridofitas{
-  background-image: url(../../../images/capas-topicos/capa-pteridofitas.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-pteridofitas.jpg);
 }
 
 .card-gimnospermas{
-  background-image: url(../../../images/capas-topicos/capa-gimnospermas.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-gimnospermas.jpg);
 }
 
 .card-angiospermas{
-  background-image: url(../../../images/capas-topicos/capa-angiospermas.jpg);
+  background-image: url(../../../../images/capas-topicos/capa-angiospermas.jpg);
 }
 
 .container {
