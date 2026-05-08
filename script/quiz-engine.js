@@ -15,27 +15,27 @@ function showModal({
   onCancel,
 }) {
   const overlay = document.createElement("div");
-  overlay.className = "modal-overlay";
+  overlay.className = "confirm-modal-overlay";
   overlay.innerHTML = `
-    <div class="modal-box">
-      <div class="modal-icon">${icon}</div>
-      <div class="modal-title">${title}</div>
-      <div class="modal-message">${message}</div>
-      <div class="modal-buttons">
-        ${cancelText ? `<button class="modal-btn modal-btn-cancel">${cancelText}</button>` : ""}
-        <button class="modal-btn modal-btn-confirm">${confirmText}</button>
+    <div class="confirm-modal-box">
+      <div class="confirm-modal-icon">${icon}</div>
+      <div class="confirm-modal-title">${title}</div>
+      <div class="confirm-modal-message">${message}</div>
+      <div class="confirm-modal-buttons">
+        ${cancelText ? `<button class="confirm-modal-btn confirm-modal-btn-cancel">${cancelText}</button>` : ""}
+        <button class="confirm-modal-btn confirm-modal-btn-confirm">${confirmText}</button>
       </div>
     </div>
   `;
   document.body.appendChild(overlay);
 
-  overlay.querySelector(".modal-btn-confirm").addEventListener("click", () => {
+  overlay.querySelector(".confirm-modal-btn-confirm").addEventListener("click", () => {
     overlay.remove();
     if (onConfirm) onConfirm();
   });
 
   if (cancelText) {
-    overlay.querySelector(".modal-btn-cancel").addEventListener("click", () => {
+    overlay.querySelector(".confirm-modal-btn-cancel").addEventListener("click", () => {
       overlay.remove();
       if (onCancel) onCancel();
     });
@@ -90,7 +90,7 @@ function getTopicId() {
 }
 
 function scrollQuizToTop() {
-  const container = document.querySelector(".div2 .container");
+  const container = document.querySelector(".div2 .quiz-container");
   if (container) container.scrollTo(0, 0);
 }
 
@@ -331,7 +331,7 @@ document.getElementById("nextNavBtn").addEventListener("click", () => {
   }
 });
 
-document.querySelector(".back-btn").addEventListener("click", () => {
+document.querySelector(".quiz-back-btn").addEventListener("click", () => {
   alert("Voltar ao tópico");
 });
 
